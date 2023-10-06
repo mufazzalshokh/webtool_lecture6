@@ -1,28 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!--   <script src="jquery-3.7.1.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script>
-$(document).ready(function(){
-  $("#btn1").click(function(){
-    $("#box").animate({height: "300px"});
-  });
-  $("#btn2").click(function(){
-    $("#box").animate({height: "100px"});
-  });
-});
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with jQuery Animations</title>
+    <style>
+        /* Styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none; /* Hide the container by default */
+        }
+    </style>
 </head>
 <body>
+    <h1>Welcome to Our Landing Page</h1>
 
-  <h3>Lecture 6</h3>
-  <p>Bla bla blla. bla bla bla blalb alb lbalbalbalb lbalb lblbalabbl balblbalalablablbalblab lba lbalbal bablblablb lbal l  nalbalalbabablabbalb bla.</p>
+    <!-- Animation 1: Fade-in Effect -->
+    <div id="animation1" class="container">
+        <h2>Fade-in Animation</h2>
+        <p>This container uses a fade-in effect when displayed.</p>
+    </div>
 
-    <button id="btn1">Animate height</button>
-    <button id="btn2">Reset height</button>
+    <!-- Animation 2: Slide-down Effect -->
+    <div id="animation2" class="container">
+        <h2>Slide-down Animation</h2>
+        <p>This container uses a slide-down effect when displayed.</p>
+    </div>
 
-    <div id="box" style="background:#98bf21;height:100px;width:100px;margin:6px;"></div>
+    <!-- Animation 3: Toggle Effect -->
+    <button id="toggleButton">Toggle Animation 3</button>
+    <div id="animation3" class="container">
+        <h2>Toggle Animation</h2>
+        <p>This container can be toggled on and off.</p>
+    </div>
 
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Animation 1: Fade-in Effect
+            $("#animation1").fadeIn(1500);
+
+            // Animation 2: Slide-down Effect
+            $("#animation2").slideDown(1500);
+
+            // Animation 3: Toggle Effect
+            $("#toggleButton").click(function() {
+                $("#animation3").slideToggle(1000);
+            });
+        });
+    </script>
 </body>
 </html>
